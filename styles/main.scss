@@ -1,5 +1,11 @@
+@import './base/fonts';
+
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
 p {
-   display: block;
-   color: darkblue;
-   background-color: mediumaquamarine;
+  display: block;
+  color: #00008b;
+  background-color: #66cdaa;
 }
