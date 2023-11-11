@@ -41,9 +41,6 @@ $lg-column: 12;
 $lg-unit: 75px;
 $lg-max-container: ($lg-unit + $gutter) * $lg-column;
 
-$md-breakpoint: 768px;
-$lg-breakpoint: 1200px;
-
 .container {
   width: 100%;
   padding: 0 $sm-margin;
@@ -64,7 +61,7 @@ $lg-breakpoint: 1200px;
     }
   }
 
-  @media screen and (min-width: $md-breakpoint) {
+  @include responsive(T) {
     max-width: $md-max-container;
     padding: 0 $md-margin;
 
@@ -75,7 +72,7 @@ $lg-breakpoint: 1200px;
     }
   }
 
-  @media screen and (min-width: $lg-breakpoint) {
+  @include responsive(D) {
     max-width: $lg-max-container;
     padding: 0;
 
