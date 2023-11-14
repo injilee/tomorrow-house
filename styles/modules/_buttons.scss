@@ -1,0 +1,78 @@
+%btn-base {
+  @include inline-flexbox;
+  padding: 0 8px;
+  font-weight: 700;
+  border-radius: 4px;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+}
+
+// Note: Button styles
+.btn-primary {
+  @extend %btn-base;
+  color: $white;
+  background-color: $blue;
+
+  &:not(:disabled):hover {
+    background-color: $darkblue;
+    transition: background-color 200ms ease-in-out;
+  }
+}
+
+.btn-secondary {
+  @extend %btn-base;
+  color: $primary;
+  background-color: $border;
+
+  &:not(:disabled):hover {
+    background-color: $tertiary;
+    transition: background-color 200ms ease-in-out;
+  }
+}
+
+.btn-outline {
+  @extend %btn-base;
+  color: $blue;
+  background-color: $white;
+  border: 1px solid $blue;
+
+  &:not(:disabled):hover {
+    background-color: $lightblue;
+    transition: background-color 200ms ease-in-out;
+  }
+}
+
+.btn-ghost {
+  @extend %btn-base;
+  color: $primary;
+  background-color: transparent;
+
+  &:not(:disabled):hover {
+    color: $secondary;
+    transition: color 200ms ease-in-out;
+  }
+}
+
+// Note: Button size
+.btn-32 {
+  @include text-style(14);
+  height: 32px;
+}
+
+.btn-40 {
+  @include text-style(16);
+  height: 40px;
+}
+
+.btn-48 {
+  @include text-style(16);
+  height: 48px;
+}
+
+.btn-55 {
+  @include text-style(18);
+  height: 55px;
+}
