@@ -20,10 +20,10 @@
   }
 
   &-right {
-    .gnb-btn-group {
+    &-btn-group {
       @include flexbox(end);
 
-      .gnb-search-btn {
+      &-search-btn {
         margin-right: 4px;
       }
     }
@@ -55,28 +55,11 @@
     &-right {
       @include flexbox(end);
 
-      .gnb-btn-group {
+      &-btn-group {
         margin-right: 24px;
 
-        .gnb-icon-btn {
+        &-icon-btn {
           margin-right: 8px;
-        }
-      }
-    }
-
-    &-nav-list {
-      @include flexbox(start);
-
-      .gnb-nav-item {
-        margin-right: 24px;
-
-        &:last-child {
-          margin-right: 0;
-        }
-
-        a {
-          @include text-style(18, $primary);
-          font-weight: 700;
         }
       }
     }
