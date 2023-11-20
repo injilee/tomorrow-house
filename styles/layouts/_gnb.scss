@@ -7,23 +7,11 @@
     height: 50px;
   }
 
-  &-icon-btn {
-    @include flexbox;
-    width: 32px;
-    height: 32px;
-    font-size: 24px;
-    color: $secondary;
-  }
-
-  &-menu-btn {
-    color: $blue;
-  }
-
   &-right {
-    &-btn-group {
+    .gnb-btn-group {
       @include flexbox(end);
 
-      &-search-btn {
+      .gnb-icon-btn.is-search {
         margin-right: 4px;
       }
     }
@@ -55,10 +43,10 @@
     &-right {
       @include flexbox(end);
 
-      &-btn-group {
+      .gnb-btn-group {
         margin-right: 24px;
 
-        &-icon-btn {
+        .gnb-icon-btn {
           margin-right: 8px;
         }
       }
