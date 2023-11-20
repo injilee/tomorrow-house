@@ -1,8 +1,8 @@
 .gnb-nav {
-  &-nav-list {
+  &-list {
     @include flexbox(start);
 
-    &-nav-item {
+    .gnb-nav-item {
       margin-right: 24px;
 
       &:last-child {
