@@ -8,6 +8,10 @@
     width: $btn-size;
     height: $btn-size;
     overflow: hidden;
+    background-image: url('../../assets/images/img-user-default.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     border: 3px solid $white;
     border-radius: 50%;
     transition: border-color 200ms ease-in-out;
