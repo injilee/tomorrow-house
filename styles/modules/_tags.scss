@@ -1,0 +1,27 @@
+// placeholder : %, mixin과 달리 그룹핑되어 렌더됨
+%tag-base {
+  @include inline-flexbox;
+  @include text-style(12);
+  height: 20px;
+  font-weight: 700;
+  padding: 0 6px;
+  border-radius: 4px;
+}
+
+.tag-red {
+  @extend %tag-base;
+  color: $white;
+  background-color: $red;
+}
+
+.tag-gray {
+  @extend %tag-base;
+  color: $secondary;
+  background-color: $border;
+}
+
+.tag-green {
+  @extend %tag-base;
+  color: $white;
+  background-color: $green;
+}
