@@ -1,0 +1,74 @@
+%form-base {
+  @include inline-flexbox(start);
+  @include text-style(16);
+  width: 100%;
+  height: 40px;
+  font-weight: 400;
+  color: $primary;
+  background-color: $white;
+  padding: 0 16px;
+  border: 1px solid $border;
+  border-radius: 4px;
+  appearance: none;
+
+  &::placeholder {
+    color: $tertiary;
+  }
+
+  &:not(:disabled):hover {
+    background-color: $background;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+.form-select,
+.form-input {
+  @extend %form-base;
+}
+
+// NOTE : select
+.select-group {
+  position: relative;
+
+  .form-select {
+    padding-right: 40px;
+    text-overflow: ellipsis;
+  }
+
+  .ic-caret {
+    @include pos-center-y;
+    right: 8px;
+    font-size: 20px;
+    pointer-events: none;
+  }
+
+  &.is-active {
+    .form-select {
+      border-color: $blue;
+    }
+
+    .ic-caret {
+      color: $blue;
+    }
+  }
+}
+
+// NOTE : input
+.input-group {
+  position: relative;
+
+  .form-input {
+    padding-left: 40px;
+  }
+
+  .ic-search {
+    @include pos-center-y;
+    left: 10px;
+    font-size: 18px;
+    color: $secondary;
+  }
+}
