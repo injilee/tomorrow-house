@@ -10,6 +10,7 @@
   border: 1px solid $border;
   border-radius: 4px;
   appearance: none;
+  transition: background-color 100ms ease-in-out;
 
   &::placeholder {
     color: $tertiary;
