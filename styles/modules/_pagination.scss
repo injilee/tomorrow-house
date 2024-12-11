@@ -1,0 +1,68 @@
+%pagination-base {
+  @include inline-flexbox;
+  @include text-style(16, $primary);
+  height: 26px;
+  font-weight: 700;
+  border-radius: 4px;
+  background-color: $white;
+}
+
+.pagination {
+  @include flexbox;
+
+  .page-control {
+    @extend %pagination-base;
+    width: 26px;
+    border: 1px solid $border;
+    transition: opacity 100ms ease-in-out;
+
+    &.btn-prev {
+      margin-right: 24px;
+
+      .ic-chevron {
+        transform: rotate(90deg);
+      }
+    }
+
+    &.btn-next {
+      margin-left: 24px;
+
+      .ic-chevron {
+        transform: rotate(-90deg);
+      }
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    .ic-chevron {
+      font-size: 20px;
+    }
+  }
+
+  .page-list {
+    @include flexbox;
+
+    .page-item {
+      a,
+      button {
+        @extend %pagination-base;
+        min-width: 26px;
+        padding: 0 4px;
+
+        &:hover {
+          color: $blue;
+        }
+      }
+
+      &.is-active {
+        a,
+        button {
+          color: $white !important;
+          background-color: $blue;
+        }
+      }
+    }
+  }
+}
