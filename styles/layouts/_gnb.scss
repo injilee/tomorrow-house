@@ -27,21 +27,9 @@
       @include flexbox(end);
     }
 
-    .gnb-search-btn {
+    .gnb-icon-btn.is-search {
       margin-right: 4px;
     }
-  }
-
-  &-icon-btn {
-    @include flexbox;
-    width: 32px;
-    height: 32px;
-    font-size: 24px;
-    color: $secondary;
-  }
-
-  &-menu-btn {
-    color: $blue;
   }
 
   @include responsive(T) {
@@ -64,7 +52,7 @@
 
     &-right {
       @include flexbox(end);
-      .gnb-search-btn {
+      .gnb-icon-btn.is-search {
         margin-right: 8px;
       }
 
