@@ -43,4 +43,55 @@
   &-menu-btn {
     color: $blue;
   }
+
+  @include responsive(T) {
+    &-wrapper {
+      height: 80px;
+    }
+
+    &-left {
+      @include flexbox(start);
+      .logo {
+        position: static;
+        transform: none;
+        margin-right: 32px;
+
+        img {
+          height: 24px;
+        }
+      }
+    }
+
+    &-right {
+      @include flexbox(end);
+      .gnb-search-btn {
+        margin-right: 8px;
+      }
+
+      .gnb-btn-group {
+        margin-right: 24px;
+      }
+    }
+
+    &-icon-btn {
+      margin-right: 8px;
+    }
+
+    &-write-btn {
+      padding-left: 14px;
+
+      i {
+        padding-left: 4px;
+      }
+    }
+  }
+
+  @include responsive(D) {
+    &-right {
+      .input-group {
+        width: 264px;
+        margin-right: 24px;
+      }
+    }
+  }
 }
