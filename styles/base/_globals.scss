@@ -9,11 +9,6 @@
   border: 0 !important;
 }
 
-.container {
-  height: 100vh;
-  background-color: rgb(241, 241, 165);
-}
-
 .sm-only {
   @media screen and (min-width: $md-breakpoint) {
     display: none !important;
