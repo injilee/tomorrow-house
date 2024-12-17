@@ -58,6 +58,26 @@
 
       .gnb-btn-group {
         margin-right: 24px;
+
+        .gnb-auth {
+          @include flexbox(between);
+          margin-left: 8px;
+
+          a {
+            @include text-style(14, $secondary);
+            display: block;
+            font-weight: 700;
+            transition: color 100ms ease-in-out;
+
+            &:first-child {
+              margin-right: 12px;
+            }
+
+            &:hover {
+              color: $blue;
+            }
+          }
+        }
       }
     }
 
