@@ -5,6 +5,7 @@
 
   &-header {
     padding: 0 12px;
+    border-bottom: 1px solid $border;
 
     .logo {
       @include flexbox(start);
@@ -39,7 +40,7 @@
 
       .username {
         @include text-style(14, $primary);
-        flex-grow: 1;
+        flex-grow: 1; // flex-grow : 차지하고 있는 너비 확인하기
         font-weight: 700;
         overflow: hidden;
         text-overflow: ellipsis;

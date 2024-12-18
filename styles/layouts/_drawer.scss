@@ -1,0 +1,104 @@
+.drawer {
+  $menu-bottom-margin: 8px;
+  $menu-item-height: 36px;
+  $community-length: 8;
+  $store-length: 9;
+  $expert-length: 2;
+
+  @function _calculate-max-height($length) {
+    @return $menu-item-height * $length + $menu-bottom-margin;
+  }
+
+  &-menu {
+    &.is-open {
+      &.is-community {
+        .drawer-content {
+          max-height: _calculate-max-height($community-length);
+        }
+      }
+
+      &.is-store {
+        .drawer-content {
+          max-height: _calculate-max-height($store-length);
+        }
+      }
+
+      &.is-expert {
+        .drawer-content {
+          max-height: _calculate-max-height($expert-length);
+        }
+      }
+
+      .ic-chevron {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+
+    &.is-active {
+      .drawer-btn {
+        color: $blue;
+      }
+    }
+  }
+
+  &-btn {
+    @include flexbox(start);
+    @include text-style(18, $primary);
+    position: relative;
+    width: 100%;
+    height: 54px;
+    padding: 0 8px;
+    font-weight: 700;
+    transition: color 100ms ease-in-out;
+
+    i {
+      font-size: 24px;
+      color: $primary;
+
+      &:first-child {
+        margin-right: 8px;
+      }
+
+      &:last-child {
+        @include pos-center-y;
+        right: 8px;
+        transform: translateY(-50%) rotate(0);
+        transition: transform 200ms ease-in-out;
+      }
+    }
+  }
+
+  &-content {
+    max-height: 0;
+    overflow: hidden;
+    border-bottom: 1px solid $border;
+    transition: max-height 200ms ease-in-out;
+  }
+
+  &-list {
+    margin-bottom: $menu-bottom-margin;
+  }
+
+  &-item {
+    &.is-active {
+      a {
+        color: $blue;
+      }
+    }
+
+    a,
+    button {
+      @include flexbox(start);
+      @include text-style(14, $primary);
+      width: 100%;
+      height: $menu-item-height;
+      font-weight: 700;
+      padding: 0 12px;
+
+      i {
+        font-size: 16px;
+        color: $red;
+      }
+    }
+  }
+}
