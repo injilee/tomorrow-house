@@ -17,8 +17,7 @@
     object-fit: cover;
   }
 
-  &:hover,
-  &.is-active {
+  &:hover {
     border: 3px solid $blue;
   }
 }
