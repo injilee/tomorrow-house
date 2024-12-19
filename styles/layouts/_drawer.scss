@@ -1,12 +1,12 @@
 .drawer {
-  $menu-bottom-margin: 8px;
-  $menu-item-height: 36px;
+  $drawer-bottom-margin: 20px;
+  $drawer-item-height: 36px;
   $community-length: 8;
   $store-length: 9;
   $expert-length: 2;
 
   @function _calculate-max-height($length) {
-    @return $menu-item-height * $length + $menu-bottom-margin;
+    @return $drawer-item-height * $length + $drawer-bottom-margin;
   }
 
   &-menu {
@@ -76,7 +76,7 @@
   }
 
   &-list {
-    margin-bottom: $menu-bottom-margin;
+    margin-bottom: $drawer-bottom-margin;
   }
 
   &-item {
@@ -91,7 +91,7 @@
       @include flexbox(start);
       @include text-style(14, $primary);
       width: 100%;
-      height: $menu-item-height;
+      height: $drawer-item-height;
       font-weight: 700;
       padding: 0 12px;
 
